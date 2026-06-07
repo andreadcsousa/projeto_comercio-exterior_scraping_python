@@ -44,3 +44,16 @@ Certifique-se de ter instalado as dependências necessárias listadas em seu amb
 
 ```bash
 pip install requests beautifulsoup4 pandas
+```
+
+### Passos de Execução
+
+- **Montar o Drive (Opcional):** Caso use o ambiente do Google Colab, execute a primeira célula para vincular seu armazenamento.
+- **Mapeamento e Download:** O script acessa a URL oficial de dados brutos e realiza a busca pelos seletores CSS para encontrar os arquivos desejados (Ex: EXP_2022.csv e IMP_2022.csv).
+- **Tratamento de Dados:** Os dados salvos são convertidos em estruturas Pandas através da definição correta do delimitador (no caso, sep=";"), e recebem a inserção da coluna discriminatória de carga.
+
+### Próximos Passos (Roadmap)
+
+[ ] Unificar os DataFrames de importação e exportação utilizando junções adequadas via Pandas (pd.concat / merge).  
+[ ] Criar um dicionário de dados cruzando as tabelas auxiliares do eSocial e da NCM para traduzir os códigos numéricos em descrições textuais amigáveis.  
+[ ] Desenvolver um dashboard interativo integrado para visualização de balança comercial e análise espacial por estado (SG_UF_NCM).
